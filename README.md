@@ -18,8 +18,11 @@ Yêu cầu **GIT**
 * [ ] Sử dụng GIT theo Feature Branch Workflow.
 * [ ] Sử dụng GIT theo Gitflow Workflow.
 
-**Mô tả chung** ứng dụng
+## Mô tả chung ứng dụng
+Phần mô tả đặt vào đây
 
+
+## Chức năng
 Các **yêu cầu chức năng** (check và ghi MSSV vào các phần chức năng đã thực hiện)
 * [ ] Yêu cầu 1. (MSSV1)
 
