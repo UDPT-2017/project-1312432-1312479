@@ -1,6 +1,6 @@
 # Project - *Xây dựng web Blog Tâm Trạng*
 
-**Name of your app** là repository cho đồ án nhóm. Nhóm tối đa 4 thành viên.
+**Xây dựng web Blog Tâm Trạng** là repository cho đồ án nhóm. Nhóm tối đa 4 thành viên.
 
 Thành viên:
 * [x] **1312432** Phạm Hữu Phong (phphong257)
