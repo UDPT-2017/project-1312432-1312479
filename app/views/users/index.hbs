@@ -1,0 +1,56 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active">Users</li>
+</ol>
+
+<div class="container">
+    <div class="">
+        <h2>Danh sách user trong hệ thống</h2>
+    </div>
+
+    {{#each listuser}}
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <div class="caption">
+                        <form class="" action="" method="post">
+                            <h3>{{this.name}}</h3>
+                            <input type="hidden" name="userid" value="{{this.id}}">
+                            <button type="submit" name="button" class="btn btn-success">
+                              <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+
+    {{#each listfriend}}
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <div class="caption">
+                        <form class="" action="" method="post">
+                            <h3>{{this.name}}</h3>
+                            <input type="hidden" name="userid" value="{{this.id}}">
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("button").click(function() {
+            $(this).hide();
+        });
+    });
+</script>

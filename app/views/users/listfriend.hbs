@@ -1,0 +1,23 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active">List Friend</li>
+</ol>
+
+<div class="container">
+  <h3>Danh sách bạn bè</h3>
+  <div class="">
+    {{#each list}}
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <div class="caption">
+                        <label for="">{{this.name}}</label>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+  </div>
+</div>
