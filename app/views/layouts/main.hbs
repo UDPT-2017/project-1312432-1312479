@@ -4,38 +4,91 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.css">
-
+    <script src="/public/js/jquery.min.js" charset="utf-8"></script>
+    <script src="/public/js/bootstrap.js" charset="utf-8"></script>
+	<link rel="icon" href="/public/image/icon.gif" type="image/gif" >
+	<link type="text/css" rel="stylesheet" href="/public/css/mystyle.css" />
+	
+	
 </head>
 
-<body>
+<body >
+	<div id="layout">
+		<div id="header">
+			<div class="hLeft">
+				<h1><a href="#"><img src="/public/image/logo.jpg" alt="logo"></a></h1>
+			<!--class hLeft--></div>
+			<div class="hRight">
+				<div class="hLogin">
+					<ul class="nav navbar-nav">
+						<li class=""><a href="/register">Đăng Ký</a></li>					
+						<li class="last"><a href="/login">Đăng Nhập</a></li>		
+					</ul>			
+				</div>
+				
+				<form class="form-inline">
+     				<div class="form-group">
+          			<input type="text" class="form-control" placeholder="Nhập từ khóa cần tìm...">
+        			</div>
+        			<button type="submit" class="btn btn-primary">
+  					<span class="glyphicon glyphicon-search"></span>
+					</button>
+ 				</form>
+ 				
+			<!--class hRight--></div>
+		<!-- / id header --></div>
+		<div id="gNav" >
+			<nav class="nav navbar-default ">
+				<div class="leftgNav" >
+					<button type="button" class="navbar-toggle collapsed" 
+					data-target="#main-nav" data-toggle="collapse" aria-expanded="false" name="button">
+						<span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+		        	</button>
+		        </div>
+				<div class="collapse navbar-collapse" id="main-nav">
+					<ul class="nav navbar-nav">
+						<li class=""><a href="/">TRANG CHỦ</a></li>
+						<li><a href="/blogs">BÀI VIẾT</a></li>
+						<li><a href="/albums">GÓC ẢNH</a></li>
+						<li><a href="#">GỬI BÀI</a></li>
+						<li class="last"><a href="/abouts">ABOUT US</a></li>		
+					</ul>		
+				</div>
+				
+			</nav>			
+		<!-- / id gNav --></div>
 
-	<nav class="nav navbar-default">
-		<div class="collapse navbar-collapse">
-			<ul class="nav navbar-nav">
-				<li>
-					<a href="/">Home</a>
-				</li>
-				<li>
-					<a href="/messages">Messages</a>
-				</li>
-				<li>
-					<a href="/users">Users</a>
-				</li>
-				<li>
-					<a href="/abouts">Abouts</a>
-				</li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li>
-					<a href="/users/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
-				</li>
-			</ul>
+		<div id="pageBody">
+			<div>
+				{{{body}}}
+			</div>
 		</div>
 
-	</nav>
-	<div class="">
-		{{{body}}}
-	</div>
+		<div id="footer">
+			<div class="fLeft">
+				<p><h4>Blog Tâm Trạng</h4></p>
+				<p>Địa chỉ:	227 Nguyễn Văn Cừ, phường 4, quận 5, TP.HCM<br />
+				<strong>Liên hệ quảng cáo:</strong> <br/>
+				Điện thoại: 012.3456789</p>
+				<p>Email: <a href="mailto:support@blogtamsu.com">support@blogtamsu.com</a></p>
+			<!-- / class fLeft --></div>
+
+			<div class="fRight">
+				<ul class="">
+					<li class=""><a href="/">TRANG CHỦ</a></li>
+					<li><a href="#">BÀI VIẾT</a></li>
+					<li><a href="#">GÓC ẢNH</a></li>
+					<li><a href="#">GỬI BÀI</a></li>
+					<li class="last"><a href="/abouts">ABOUT US</a></li>		
+				</ul>	
+				<p>Copyright (c) 2017 Blog Tâm Trạng</p>
+			<!--class fRight--></div>
+		<!-- / id footer --></div>
+	<!-- / id layout --></div>
+	
 
 </body>
 
