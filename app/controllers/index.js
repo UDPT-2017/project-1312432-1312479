@@ -1,7 +1,10 @@
 
 module.exports = {
   home: require('./HomeController'),
-  users: require('./UsersController'),
-  messages: require('./MessagesController'),
-  abouts: require('./AboutsController')
+  abouts: require('./AboutsController'),
+  blogs: require('./BlogsController'),
+  login: require('./LoginController'),
+  register: require('./RegisterController'),
+  albums: require('./AlbumsController')
+
 };
