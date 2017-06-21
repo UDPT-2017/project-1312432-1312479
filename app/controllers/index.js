@@ -5,6 +5,6 @@ module.exports = {
   blogs: require('./BlogsController'),
   login: require('./LoginController'),
   register: require('./RegisterController'),
-  albums: require('./AlbumsController')
-
+  albums: require('./AlbumsController'),
+  admin: require('./admin/DashboardController')
 };
