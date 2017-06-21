@@ -8,31 +8,32 @@
     <script src="/public/js/bootstrap.js" charset="utf-8"></script>
 	<link rel="icon" href="/public/image/icon.gif" type="image/gif" >
 	<link type="text/css" rel="stylesheet" href="/public/css/mystyle.css" />
-	
+	<title>{{title}}</title>
 	
 </head>
-
 <body >
-	<div id="layout">
-		<div id="header">
-			{{> header}}
-		<!-- / id header --></div>
-		<div id="gNav" >
-			{{> menu}}		
-		<!-- / id gNav --></div>
-
-		<div id="pageBody">
-			<div>
-				{{{body}}}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div id="header">{{> header}}</div>	
 			</div>
 		</div>
-
-		<div id="footer">
-			{{> footer}}
-		<!-- / id footer --></div>
-	<!-- / id layout --></div>
-	
-
+		<div class="row">
+			<div class="col-md-12">
+				<div id="gNav" >{{> menu}}</div>			
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div id="pageBody">{{{body}}}</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div id="footer">{{> footer}}</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
