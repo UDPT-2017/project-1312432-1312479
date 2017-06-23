@@ -35,6 +35,7 @@ var UsersController = {
     // },
     signup: function(req, res) {
         res.render('users/signup', {
+            title: 'Signup',
             layout: 'main'
         });
     },
@@ -75,7 +76,7 @@ var UsersController = {
     // },
 
     create: function(req, res) {
-        console.log('signup');
+        
         users.findByEmail({
                 email: req.body.email
             },
@@ -113,11 +114,29 @@ var UsersController = {
     },
     
 
-    login: function(req, res) {
-        res.render('users/login', {
-            title: 'users',
-            message: 'users',
-            layout: 'application'
+    signin: function(req, res) {
+        res.render('users/signin', {
+            title: 'Signin',
+            layout: 'main'
+        });
+    },
+
+    index: function(req, res) {
+        users.index({
+            email: req.body.email,
+            password: req.body.password
+        }, function(err, result) { 
+            if(err) {
+                res.redirect('/users/signin');
+            } else {
+                //dang nhap thanh cong
+                if(result.length == 1) {
+                     res.redirect('/');
+                } else {
+                    //dang nhap khong thanh cong
+                     res.redirect('/users/signin');
+                }
+            }
         });
     },
 
