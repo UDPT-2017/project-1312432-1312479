@@ -131,10 +131,11 @@ var UsersController = {
             } else {
                 //dang nhap thanh cong
                 if(result.length == 1) {
-                     res.redirect('/');
+                    req.session.userid = result[0].id;
+                    res.redirect('/');
                 } else {
                     //dang nhap khong thanh cong
-                     res.redirect('/users/signin');
+                    res.redirect('/users/signin');
                 }
             }
         });
@@ -168,9 +169,9 @@ var UsersController = {
     //         });
     // },
 
-    logout: function(req, res) {
+    signout: function(req, res) {
         req.session.destroy();
-        res.redirect('/users/login');
+        res.redirect('/users/signin');
     },
     // listfriend: function(req, res){
     //   relations.findlistfriend({

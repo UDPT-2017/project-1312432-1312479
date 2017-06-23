@@ -4,7 +4,7 @@ var path = require('path');
 module.exports = function(app) {
     app.engine('hbs', exphbs({
         extname: '.hbs',
-        defaultLayout: 'main',
+        defaultLayout: 'main_user',
         layoutsDir: path.resolve('./app/views/layouts'),
         partialsDir: path.resolve('./app/views/partials')
     }));
