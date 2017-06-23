@@ -1,5 +1,6 @@
 var HomeController = {
     index: function(req, res) {
+    	console.log(req.session);
         res.render('home/index', {
             title: ' Trang Chủ',
             message: 'My HomePage',
