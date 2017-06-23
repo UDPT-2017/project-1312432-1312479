@@ -6,5 +6,6 @@ module.exports = {
   login: require('./LoginController'),
   register: require('./RegisterController'),
   albums: require('./AlbumsController'),
-  admin: require('./admin/DashboardController')
+  admin: require('./admin/DashboardController'),
+  users: require('./UsersController')
 };

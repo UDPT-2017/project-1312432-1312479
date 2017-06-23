@@ -24,6 +24,10 @@ module.exports = function(app) {
     var adminRoutes = Router()
         .get('/', controllers.admin.index);
         
+    var usersRoutes = Router()
+        .post('/signup', controllers.users.create)
+        .get('/signup', controllers.users.signup);
+
     app.use('/albums/photo', albumsRoutes);
     app.use('/albums', albumsRoutes);
     app.use('/login', loginRoutes);
@@ -31,4 +35,5 @@ module.exports = function(app) {
     app.use('/', homeRoutes);
     app.use('/abouts', aboutsRoutes);
     app.use('/admin', adminRoutes);
+    app.use('/users', usersRoutes);
 };
