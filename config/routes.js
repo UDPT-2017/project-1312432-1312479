@@ -25,6 +25,8 @@ module.exports = function(app) {
         .get('/', controllers.admin.index);
         
     var usersRoutes = Router()
+        .post('/signin', controllers.users.index)
+        .get('/signin', controllers.users.signin)
         .post('/signup', controllers.users.create)
         .get('/signup', controllers.users.signup);
 
