@@ -1,6 +1,6 @@
 <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item active">List User</li>
+    <li class="breadcrumb-item active">List Friend</li>
 </ol>
 
 <div class="container">
@@ -13,6 +13,8 @@
                     <span class="glyphicon glyphicon-user"></span>
                     <div class="caption">
                         <label for="">{{this.email}}</label>
+                        <button class="follow_user" id="{{this.id}}">follow</button>
+                        
                     </div>
                 </div>
             </div>
@@ -20,3 +22,4 @@
     {{/each}}
   </div>
 </div>
+

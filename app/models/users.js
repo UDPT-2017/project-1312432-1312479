@@ -36,7 +36,19 @@ var users = {
                 callback(err, result.rows);
             });
     },
-
+    listfriend: function(user, callback) {
+        db.query('select u.email from users u, relations r where r.friendid = u.id and r.usersid = $1', [user.id],
+            function(err, result) {
+                callback(err, result.rows);
+            });
+    },
+    listuser: function(user, callback) {
+        db.query('select id,email from users where id in (select u.id from users u where u.id != $1 except select r.friendid from relations r where r.usersid = $2)', [user.id, user.id],
+            function(err, result) {
+                callback(err, result.rows);
+            });
+    },
+    
     // findAll: function(user, callback) {
     //     db.query('select id, name from users where id != $1', [user.id],
     //         function(err, result) {
