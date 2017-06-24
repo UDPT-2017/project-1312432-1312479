@@ -1,0 +1,12 @@
+<div>
+</div>
+<div class="container">
+	<h3>Danh sách bài viết cua {{user_email}}</h3>
+	{{#each blogs}}
+		<div class="row">
+			<div class="thumbnail">
+				<label>Title: {{this.title}}</label>
+				<a href="/blogs/{{this.id}}">Chi tiết bài viết</a></div>
+			</div>
+	{{/each}}
+</div>

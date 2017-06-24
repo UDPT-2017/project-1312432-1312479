@@ -1,6 +1,6 @@
 var users = require('../models/users');
 var relations = require('../models/relations');
-
+var blogs = require('../models/blogs');
 var UsersController = {
 
     // index: function(req, res) {
@@ -76,7 +76,7 @@ var UsersController = {
     // },
 
     create: function(req, res) {
-        
+
         users.findByEmail({
                 email: req.body.email
             },
@@ -112,7 +112,7 @@ var UsersController = {
                 }
             });
     },
-    
+
 
     signin: function(req, res) {
         res.render('users/signin', {
@@ -125,12 +125,13 @@ var UsersController = {
         users.index({
             email: req.body.email,
             password: req.body.password
-        }, function(err, result) { 
-            if(err) {
+        }, function(err, result) {
+            if (err) {
                 res.redirect('/users/signin');
             } else {
                 //dang nhap thanh cong
-                if(result.length == 1) {
+                if (result.length == 1) {
+                    req.session.user_email = result[0].email;
                     req.session.userid = result[0].id;
                     res.redirect('/');
                 } else {
@@ -140,7 +141,29 @@ var UsersController = {
             }
         });
     },
-
+    listBlogs: function(req, res) {
+        blogs.getBlogByUser({
+            id: req.params.id
+        }, function(err, result) {
+            if(err) {
+                res.redirect('/error');
+            } else {
+                if(result.length > 0) {
+                    res.render('blogs/listBlogs',{
+                        title: 'Danh sách bài viết',
+                        blogs: result,
+                        user_email: req.session.user_email,
+                        status: 1
+                    });
+                } else {
+                     res.render('blogs/listBlogs',{
+                        title: 'Danh sách bài viết',
+                        status: 0
+                    });
+                }
+            }
+        });
+    },
     // search: function(req, res) {
     //     users.search({
     //             email: req.body.email,

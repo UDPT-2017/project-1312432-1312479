@@ -1,6 +1,7 @@
 var db = require('./db');
 
 var users = {
+
     index: function(user, callback) {
         db.query('select id, name, email from users where email = $1 and password = $2', [user.email, user.password],
             function(err, result) {
