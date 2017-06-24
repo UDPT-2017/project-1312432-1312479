@@ -8,14 +8,14 @@
         <a href="/messages/create" class="btn btn-success">Tạo tin nhắn</a>
         <a href="/messages/receive" class="btn btn-success">Xem tin nhắn đã nhận</a>
     </div>
-    <h4>Danh sách tin nhắn đã gởi</h4>
-    {{#each list}}
-        <div class="row">
-            <div class="thumbnail">
-                <label>Người nhận : {{this.email}}</label></br>
-                <label>title : {{this.title}}</label>
-                <a href="/messages/detail/{{this.id}}">Chi tiết</a>
-            </div>
-        </div>
-    {{/each}}
+    <h3>Danh sách tin nhắn đã nhận</h3>
+   	{{#each list}}
+   		<div class="row">
+			<div class="thumbnail">
+				<label>Người gởi : {{this.email}}</label></br>
+				<label>title : {{this.title}}</label>
+				<a href="/messages/detail/{{this.id}}">Chi tiết</a>
+			</div>
+		</div>
+   	{{/each}}
 </div>
