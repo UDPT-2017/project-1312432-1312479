@@ -12,6 +12,12 @@ var relations = {
             function(err, result) {
                 callback(err, result.rows);
             });
+    },
+    follow: function(relations, callback) {
+        db.query('insert into relations(usersid, friendid) values($1, $2)', [relations.userid, relations.friendid],
+            function(err, result) {
+                callback(err, result.rows);
+            });
     }
 }
 

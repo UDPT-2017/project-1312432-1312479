@@ -27,6 +27,9 @@ module.exports = function(app) {
     //     .get('/', controllers.admin.index);
 
     var usersRoutes = Router()
+        .post('/follow', controllers.users.follow)
+        .get('/listuser', controllers.users.getlistuser)
+        .get('/listfriend', controllers.users.getlistfriend)
         .get('/listblog/:id', controllers.users.listBlogs)
         .get('/signout', controllers.users.signout)
         .post('/signin', controllers.users.index)

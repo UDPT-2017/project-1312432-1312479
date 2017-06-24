@@ -39,7 +39,62 @@ var UsersController = {
             layout: 'main'
         });
     },
+    getlistuser: function(req, res) {
+        users.listuser({
+            id: req.session.userid
+        }, function(err, result) {
+            if (err) {
+                res.redirect('/errors');
+            } else {
+                if (result.length > 0) {
+                    res.render('users/listuser', {
+                        title: 'List user',
+                        list: result,
+                        status: 1
+                    });
+                } else {
+                    res.render('users/listuser', {
+                        title: 'list user',
+                        status: 0
+                    });
+                }
+            }
+        });
+    },
+    getlistfriend: function(req, res) {
+        users.listfriend({
+            id: req.session.userid
+        }, function(err, result) {
+            if (err) {
+                res.redirect('/errors');
+            } else {
+                if (result.length > 0) {
+                    res.render('users/listfriend', {
+                        title: 'List friend',
+                        list: result,
+                        status: 1
+                    });
+                } else {
+                    res.render('users/listfriend', {
+                        title: 'list friend',
+                        status: 0
+                    });
+                }
+            }
+        });
+    },
+    follow: function(req, res) {
+        relations.follow({
+            userid: req.session.userid,
+            friendid: req.body.id
+        }, function(err, result) {
+            if (err) {
+                res.redirect('/errors');
+            } else {
 
+            }
+        });
+    },
     // addfriend: function(req, res) {
     //     relations.search({
     //         userid: req.session.userid,
@@ -145,18 +200,18 @@ var UsersController = {
         blogs.getBlogByUser({
             id: req.params.id
         }, function(err, result) {
-            if(err) {
+            if (err) {
                 res.redirect('/errors');
             } else {
-                if(result.length > 0) {
-                    res.render('blogs/listBlogs',{
+                if (result.length > 0) {
+                    res.render('blogs/listBlogs', {
                         title: 'Danh sách bài viết',
                         blogs: result,
                         user_email: req.session.user_email,
                         status: 1
                     });
                 } else {
-                     res.render('blogs/listBlogs',{
+                    res.render('blogs/listBlogs', {
                         title: 'Danh sách bài viết',
                         status: 0
                     });
