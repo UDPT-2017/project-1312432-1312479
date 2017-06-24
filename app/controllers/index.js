@@ -7,5 +7,7 @@ module.exports = {
   register: require('./RegisterController'),
   albums: require('./AlbumsController'),
   admin: require('./admin/DashboardController'),
-  users: require('./UsersController')
+  users: require('./UsersController'),
+  errors: require('./ErrorsController'),
+  messages: require('./MessagesController')
 };
