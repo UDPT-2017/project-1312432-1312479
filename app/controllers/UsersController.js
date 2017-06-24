@@ -146,7 +146,7 @@ var UsersController = {
             id: req.params.id
         }, function(err, result) {
             if(err) {
-                res.redirect('/error');
+                res.redirect('/errors');
             } else {
                 if(result.length > 0) {
                     res.render('blogs/listBlogs',{

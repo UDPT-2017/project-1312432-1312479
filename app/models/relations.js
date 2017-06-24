@@ -7,8 +7,8 @@ var relations = {
                 callback(err, result.rows);
             });
     },
-    findlistfriend: function(relations, callback) {
-        db.query('select u.id,u.name from users u, relations r where u.id = r.friendid and r.userid = $1', [relations.userid],
+    getlistfriend: function(relations, callback) {
+        db.query('select u.id,u.email from users u, relations r where u.id = r.friendid and r.usersid = $1', [relations.id],
             function(err, result) {
                 callback(err, result.rows);
             });

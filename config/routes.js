@@ -38,6 +38,10 @@ module.exports = function(app) {
         .get('/', controllers.errors.index);
 
     var messagesRoutes = Router()
+        .get('/detail/:id', controllers.messages.show)
+        .get('/receive', controllers.messages.receive)
+        .post('/create', controllers.messages.store)
+        .get('/create', controllers.messages.create)
         .get('/', controllers.messages.index);
 
     app.use('/albums/photo', albumsRoutes);
