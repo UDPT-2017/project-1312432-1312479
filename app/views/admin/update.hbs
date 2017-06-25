@@ -1,0 +1,40 @@
+<div class="">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
+    <li class="breadcrumb-item active">Update user</li>
+  </ol>
+</div>
+<div class="col-lg-8 col-md-10 col-lg-offset-2 col-md-offset-1" ,="" role="main">
+	<div class="row" ,="" style="padding-top: 10px">
+        <div class="col-xs-12">
+        	<div class="col-lg-8 col-lg-offset-2 panel panel-login">
+  
+				<h3 class="labelLogin" ,="" style="width: 100%;">Sửa Thông Tin User</h3>
+
+				<form action="/admin/update/{{user.id}}" method="post" enctype="application/x-www-form-urlencoded">
+				<div class="form-group">
+
+				    <div class="input-group form-group">
+				        <span class="input-group-addon"></span>
+				        <input class="form-control" placeholder="Nhập họ và tên" required="required" type="text" name="name"  value="{{user.name}}">
+				    </div>
+				      
+				    <div class="input-group form-group">
+				        <span class="input-group-addon"></span>
+				        <input class="form-control" placeholder="Nhập email" required="required" type="email" name="email" value="{{user.email}}">
+				      </div>
+					<div class="input-group form-group">
+				        <span class="input-group-addon"></span>
+				        <input class="form-control" placeholder="Nhập mật khẩu" required="required" type="text" name="password" value="{{user.password}}">
+				    </div>
+				    				      
+				</div>
+				<input type="submit" class="btn btn-lg btn-login form-control" value="Update">
+				  		  
+				</form>
+			</div>
+		</div>
+        
+	</div>
+    
+</div>

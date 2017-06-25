@@ -1,0 +1,30 @@
+
+<div class="">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item"><a href="/albums">Albums</a></li>
+    <li class="breadcrumb-item active">Album1</li>
+  </ol>
+</div>
+
+<h4>Tuyển tập ảnh girl xinh 2017</h4>
+<div class="row">
+	<div class="col-md-12">
+		{{#if isNoResults}}
+			<div class="alert alert-danger" role="alert">
+				Không tìm thấy kết quả
+			</div>
+		{{/if}}
+	</div>
+</div>
+<div class="row">
+	{{#each images}}
+		<div class="col-sm-3 col-xs-4">
+			<div class="album1">
+				<a href="#"><img src="{{this.url}}" alt="">
+				
+			</a>
+			</div>
+		</div>
+	{{/each}}
+</div>

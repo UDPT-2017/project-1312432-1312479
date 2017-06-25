@@ -1,0 +1,70 @@
+<div class="">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active">Contact</li>
+  </ol>
+</div>
+<h3>Thông tin nhóm *</h3>
+<div class="panel panel-default">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>MSSV</th>
+        <th>Họ Tên</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>1312432</td>
+        <td>Phạm Hữu Phong</td>
+        <td>1312432@student.hcmus.edu.vn</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>1312479</td>
+        <td>Lại Trọng Sang</td>
+        <td>1312479@student.hcmus.edu.vn</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <h3>Liên hệ với chúng tôi *</h3>
+  <div class="row">
+    <div class="col-md-12">
+      <form class="" action="/contact" method="post">
+        <div class="form-group">
+           <div class="input-group form-group">
+                <span class="input-group-addon"></span>
+                <input class="form-control" placeholder="Nhập họ và tên" required="required" type="text" name="hoten">
+            </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group form-group">
+                <span class="input-group-addon"></span>
+                <input class="form-control" placeholder="Nhập email" required="required" type="email" name="email">
+              </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group form-group">
+                <span class="input-group-addon"></span>
+                <input class="form-control" placeholder="Nhập số điện thoại" required="required" type="text" name="sdt" >
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group form-group">
+          <span class="input-group-addon"></span>
+          <textarea name="message" class="form-control" rows="8" cols="88" placeholder="Nhập nội dung..." required="required"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Gửi thông tin</button>
+        </div>
+      </form>
+    </div>
+</div>
+<h3>Địa chỉ *</h3>
+
+  <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:440px;width:800px;'><div id='gmap_canvas' style='height:440px;width:800px;'></div><div><small><a href="http://embedgooglemaps.com">Click here to generate your map!</a></small></div><div><small><a href="http://mrdiscountcode.hk/agoda/">click here to see the top 10 latest dicount for agoda</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(10.761938389608455,106.67941932286226),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(10.761938389608455,106.67941932286226)});infowindow = new google.maps.InfoWindow({content:'<strong>Sky</strong><br>227 Nguyễn Văn Cừ, phường 4, Quận 5, Hồ Chí Minh, Việt Nam<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>

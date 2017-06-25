@@ -1,6 +1,56 @@
-<div class="">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item active">Admin</li>
-  </ol>
+<div>
+	<ol class="breadcrumb">
+	  <li class="breadcrumb-item active">Admin</li>
+	</ol>
 </div>
+	<h1 style="color: #1E18D2; text-align: center; ">Dashbord</h1>
+  	<h3>Thông tin người dùng</h3>
+  	<table class="table table-bordered table-hover">
+	    <thead>
+	      <tr>
+	        <th>Id</th>
+	        <th>Họ Tên</th>
+	        <th>Email</th>
+	        <th>Password</th>
+	        
+	        <th><a href="/admin/insert">Thêm</a></th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	    	{{#each lists}}
+		      <tr>
+		        <td>{{this.id}}</td>
+		        <td>{{this.name}}</td>
+		        <td>{{this.email}}</td>
+		        <td>{{this.password}}</td>
+		        
+		        <td><a href="/admin/update/{{this.id}}">Sửa</a></td>
+		        <td><a onclick="return confirm('Are you sure ?')"  href="/admin/delete/{{this.id}}">Xóa</a></td>
+		      </tr>
+	     	{{/each}}
+	    </tbody>
+  	</table>
+  	<h3>Thông tin contact của người dùng</h3>
+  	<table class="table table-bordered table-hover">
+	    <thead>
+	      <tr>
+	        <th>Id</th>
+	        <th>Họ Tên</th>
+	        <th>Email</th>
+	        <th>Số Điện Thoại</th>
+	        <th>Message</th>
+	        
+	      </tr>
+	    </thead>
+	    <tbody>
+	    	{{#each lists_contact}}
+		      <tr>
+		        <td>{{this.id}}</td>
+		        <td>{{this.hoten}}</td>
+		        <td>{{this.email}}</td>
+		        <td>{{this.sdt}}</td>
+		        <td>{{this.message}}</td>
+		      </tr>
+	     	{{/each}}
+	    </tbody>
+  	</table>
