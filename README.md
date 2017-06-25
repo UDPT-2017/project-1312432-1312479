@@ -6,7 +6,7 @@ Thành viên:
 * [x] **1312432** Phạm Hữu Phong (phphong257)
 * [x] **1312479** Lại Trọng Sang (laitrongsang95)
 
-URL: **URL hosting của đề tài**
+URL: **https://project-1312479-1312432.herokuapp.com**
 Báo cáo: **URL Github Page của đề tài**
 
 ## Yêu cầu
