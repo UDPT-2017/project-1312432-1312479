@@ -9,5 +9,6 @@ module.exports = {
   admin: require('./admin/DashboardController'),
   users: require('./UsersController'),
   errors: require('./ErrorsController'),
-  messages: require('./MessagesController')
+  messages: require('./MessagesController'),
+  comments: require('./CommentsController')
 };

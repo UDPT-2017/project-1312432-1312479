@@ -2,10 +2,14 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var router = express.Router()
+const fileUpload = require('express-fileupload');
+var multer  = require('multer')
+var upload = multer({ dest: 'uploads/' })
 
 
 
 module.exports = function(app) {
+    app.use(fileUpload());
     app.use(session({
         secret: 'secret'
     }));

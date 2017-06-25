@@ -27,6 +27,7 @@ module.exports = function(app) {
     //     .get('/', controllers.admin.index);
 
     var usersRoutes = Router()
+        .get('/blogs', controllers.users.blogs)
         .post('/follow', controllers.users.follow)
         .get('/listuser', controllers.users.getlistuser)
         .get('/listfriend', controllers.users.getlistfriend)
@@ -47,6 +48,10 @@ module.exports = function(app) {
         .get('/create', controllers.messages.create)
         .get('/', controllers.messages.index);
 
+    var commentsRoutes = Router()
+        .get('/list/:id', controllers.comments.getlist)
+        .post('/create', controllers.comments.create);
+
     app.use('/albums/photo', albumsRoutes);
     app.use('/albums', albumsRoutes);
     //app.use('/login', loginRoutes);
@@ -57,4 +62,5 @@ module.exports = function(app) {
     app.use('/users', usersRoutes);
     app.use('/errors', errorsRoutes);
     app.use('/messages', messagesRoutes);
+    app.use('/comments', commentsRoutes);
 };
