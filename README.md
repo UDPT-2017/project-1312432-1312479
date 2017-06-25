@@ -96,13 +96,17 @@ Các **yêu cầu chức năng** (check và ghi MSSV vào các phần chức nă
 * [x] Admin quản trị hệ thống có thể theo dõi danh sách người dùng, danh sách contact người dùng gửi đến. (**1312479**)
 * [x] Admin quản trị hệ thống có thể thêm mới user, cập nhật thông tin, xóa user. (**1312479**)
 * [x] kiểm tra dữ liệu ở phía client, hiệu ứng trang web. (**1312479**)
-* [x] Báo cáo. (**1312479**) 
+* [x] Báo cáo và demo. (**1312479**) 
 
 ## Demo
 
 Link ảnh GIF demo ứng dụng:
 
-![Video Walkthrough](demo.gif)
+#### Chức năng người dùng
+![chức năng người dùng](https://github.com/UDPT-2017/project-1312432-1312479/blob/master/project1.gif)
+
+#### Chức năng Admin
+![chức năng admin](https://github.com/UDPT-2017/project-1312432-1312479/blob/master/project2.gif)
 
 Tạo ảnh GIF với chương trình [LiceCap](http://www.cockos.com/licecap/).
 
