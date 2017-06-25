@@ -219,6 +219,29 @@ var UsersController = {
             }
         });
     },
+    blogs: function(req, res) {
+        blogs.getBlogByUser({
+            id: req.session.userid
+        }, function(err, result) {
+            if (err) {
+                res.redirect('/errors');
+            } else {
+                if (result.length > 0) {
+                    res.render('blogs/listBlogs', {
+                        title: 'Danh sách bài viết',
+                        blogs: result,
+                        user_email: req.session.user_email,
+                        status: 1
+                    });
+                } else {
+                    res.render('blogs/listBlogs', {
+                        title: 'Danh sách bài viết',
+                        status: 0
+                    });
+                }
+            }
+        });
+    },
     // search: function(req, res) {
     //     users.search({
     //             email: req.body.email,

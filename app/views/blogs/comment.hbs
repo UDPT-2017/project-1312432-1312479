@@ -1,0 +1,11 @@
+<div class="container">
+	<h3>Danh sách comment</h3>
+	{{#each list}}
+	<div class="row">
+		<div class="thumbnail">
+			<label>email: {{this.email}}</label></br>
+			<label>{{this.content}}</label>
+		</div>
+	</div>
+	{{/each}}
+</div>
