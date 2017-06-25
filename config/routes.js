@@ -7,8 +7,6 @@ var controllers = require('../app/controllers');
 module.exports = function(app) {
     var homeRoutes = Router()
         .get('/', controllers.home.index);
-    var aboutsRoutes = Router()
-        .get('/', controllers.abouts.index);
 
     var blogsRoutes = Router()
         .get('/:id', controllers.blogs.show)
@@ -22,7 +20,10 @@ module.exports = function(app) {
         .get('/', controllers.register.index);
 
     var albumsRoutes = Router()
-        .get('/', controllers.albums.index);
+        .get('/', controllers.albums.index)
+        .get('/1', controllers.albums.show1)
+        .get('/3', controllers.albums.search)
+        .get('/2', controllers.albums.show2);
     // var adminRoutes = Router()
     //     .get('/', controllers.admin.index);
 
@@ -52,15 +53,27 @@ module.exports = function(app) {
         .get('/list/:id', controllers.comments.getlist)
         .post('/create', controllers.comments.create);
 
-    app.use('/albums/photo', albumsRoutes);
+    var adminRoutes = Router()
+        .get('/', controllers.admin.index)
+        .get('/insert', controllers.admin.insert1)
+        .post('/insert', controllers.admin.insert_user)
+        .get('/update/:id', controllers.admin.select_id)
+        .post('/update/:id', controllers.admin.update_user)
+        .get('/delete/:id', controllers.admin.delete_user);
+
+    var contactRoutes = Router()
+        .get('/', controllers.contact.index)
+        .post('/', controllers.contact.create);
+
     app.use('/albums', albumsRoutes);
     //app.use('/login', loginRoutes);
     app.use('/blogs', blogsRoutes);
     app.use('/', homeRoutes);
-    app.use('/abouts', aboutsRoutes);
     //app.use('/admin', adminRoutes);
     app.use('/users', usersRoutes);
     app.use('/errors', errorsRoutes);
     app.use('/messages', messagesRoutes);
     app.use('/comments', commentsRoutes);
+    app.use('/admin', adminRoutes);
+    app.use('/contact', contactRoutes);
 };
