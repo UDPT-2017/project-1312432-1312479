@@ -15,12 +15,7 @@ var ContactController = {
       message:req.body.message
     }, function(err) {
       if(err) {
-          res.render('contact/index', {
-            title: ' Liên Hệ',
-            message: 'contact',
-            layout: 'main', 
-            detailMessages: { err:'Data Error'}  
-          }); 
+         res.redirect('/errors');
       } else {
           res.render('contact/message', {
           title: ' Liên Hệ',
