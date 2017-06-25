@@ -138,7 +138,7 @@ var UsersController = {
             function(err, result) {
                 if (err) {
                     //thuc hien that bai
-                    res.redirect('/users/signup');
+                    res.redirect('/errors');
                 } else {
                     //kiem tra dang nhap
                     console.log(result);
@@ -157,7 +157,7 @@ var UsersController = {
                             function(err, result) {
                                 if (err) {
                                     //that bai
-                                    res.redirect('/users/register');
+                                    res.redirect('/errors');
                                 } else {
                                     //thanh cong
                                     res.redirect('/users/login');
@@ -182,7 +182,7 @@ var UsersController = {
             password: req.body.password
         }, function(err, result) {
             if (err) {
-                res.redirect('/users/signin');
+                res.redirect('/errors');
             } else {
                 //dang nhap thanh cong
                 if (result.length == 1) {

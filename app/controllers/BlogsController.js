@@ -14,7 +14,7 @@ var BlogsController = {
             picture: req.body.picture
         }, function(err, result) {
             if (err) {
-                res.redirect('/blogs');
+                res.redirect('/errors');
             } else {
                 res.redirect('/blogs');
             }
