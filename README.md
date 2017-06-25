@@ -24,23 +24,23 @@ Phần mô tả đặt vào đây
 
 ## Lập trình server
 ### MVC
-* [x] MVC (1312432-1312479)
-* [x] Config (1312432-1312479)
-* [x] REST routing (1312432-1312479)
-* [x] Layout & partial (1312432-1312479)
+* [x] MVC (**1312432-1312479**)
+* [x] Config (**1312432-1312479**)
+* [x] REST routing (**1312432-1312479**)
+* [x] Layout & partial (**1312432-1312479**)
 
 ### Lập trình dữ liệu
-* [x] Thêm (1312432-1312479)
-* [x] Xóa (1312432-1312479)
-* [x] Sửa (1312432-1312479)
-* [x] Tìm kiếm (1312432-1312479)
+* [x] Thêm (**1312432-1312479**)
+* [x] Xóa (**1312432-1312479**)
+* [x] Sửa (**1312432-1312479**)
+* [x] Tìm kiếm (**1312432-1312479**)
 
 ### Xử lý lỗi
-* [x] Xử lý lỗi trong cùng trang web (1312432-1312479)
-* [ ] Xử lý lỗi dùng trang web riêng (MSSV1)
-   * [x] 401 (1312432)
-   * [ ] 404 (MSSV1)
-   * [x] 500 (1312432)
+* [x] Xử lý lỗi trong cùng trang web (**1312432-1312479**)
+* [ ] Xử lý lỗi dùng trang web riêng (**MSSV1**)
+   * [x] 401 (**1312432**)
+   * [ ] 404 (**MSSV1**)
+   * [x] 500 (**1312432**)
 
 ### Tương tác API khác
 Liệt kê các API nhóm đã sử dụng được ở đây
@@ -49,14 +49,14 @@ Liệt kê các API nhóm đã sử dụng được ở đây
 * [ ] ...
 
 ## Lập trình client
-* [x] Kiểm tra dữ liệu (1312479)
-* [x] Animation (1312479)
-* [x] Thao tác DOM (1312479)
+* [x] Kiểm tra dữ liệu (**1312479**)
+* [x] Animation (**1312479**)
+* [x] Thao tác DOM (**1312479**)
 * [x] AJAX (MSSV1)
 
 ## Bảo mật
-* [x] Chứng thực ()
-* [x] Phân quyền sử dụng một số trang web với nhiều vai trò khác nhau (MSSV1)
+* [x] Chứng thực (**1312432**)
+* [x] Phân quyền sử dụng một số trang web với nhiều vai trò khác nhau (**1312432-1312479**)
    * [x] Không cho phép thao tác vào trang web khi không có quyền (MSSV1)
    * [ ] Thể hiện các chức năng khác nhau trên cùng giao diện khi người dùng có quyền khác nhau (MSSV1)
    * [ ] Thể hiện lỗi khi không truy xuất được trang khi không có quyền (MSSV1)
@@ -75,8 +75,8 @@ Các **yêu cầu chức năng** (check và ghi MSSV vào các phần chức nă
 * [x] Khi nhấn vào trang cá nhân sẽ thấy danh sách các bài viết của người dùng đó. (**1312432**)
 * [x] Nhấn vào trang bài viết để đăng bài. Bài viết bao gồm: tiêu đề, nội dung (**1312432**)
 * [x] Khi nhấn vào trang góc ảnh sẽ thấy danh sách các album đã được lưu trữ trong hệ thống. Mỗi album bao gồm: ảnh cover, tiêu đề, ngày đăng. (**1312479**)
-* [x] Khi nhấn vào từng album sẽ sẽ chuyển sang danh sách các tấm ảnh trong album. (**1312479*)
-* [x] Khi nhấn vào từng album có thể tìm kiếm ảnh theo tên của ảnh đó. (**1312479*)  
+* [x] Khi nhấn vào từng album sẽ sẽ chuyển sang danh sách các tấm ảnh trong album. (**1312479**)
+* [x] Khi nhấn vào từng album có thể tìm kiếm ảnh theo tên của ảnh đó. (**1312479**)  
 * [x] Khi nhấn vào trang tin nhắn sẽ thấy: danh sách người dùng, danh sách theo dõi, tạo tin nhắn, xem tin nhắn đã nhận. (**1312432**)
 * [x] Khi nhấn vào danh sách người dùng sẽ hiển thị danh sách người dùng và có thể theo dõi họ. (**1312432**)
 * [x] Khi nhấn vào danh sách theo dõi sẽ hiển thị danh sách bạn bè mà mình đã follow. (**1312432**)
@@ -95,6 +95,7 @@ Các **yêu cầu chức năng** (check và ghi MSSV vào các phần chức nă
 * [x] Đăng nhập bằng email và password. (**1312432**)
 * [x] Admin quản trị hệ thống có thể theo dõi danh sách người dùng, danh sách contact người dùng gửi đến. (**1312479**)
 * [x] Admin quản trị hệ thống có thể thêm mới user, cập nhật thông tin, xóa user. (**1312479**)
+* [x] kiểm tra dữ liệu ở phía client, hiệu ứng trang web. (**1312479**)
 * [x] Báo cáo. (**1312479**) 
 
 ## Demo
